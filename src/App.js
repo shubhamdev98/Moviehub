@@ -210,7 +210,7 @@ function WatchedList({ watched }) {
 function WatchedMmovie({ watched }) {
   return (
     <>
-      {watched.map((watched) => (
+      {watched?.map((watched) => (
         <div
           className="bg-cyan-800 flex mb-2  h-28 rounded-md"
           key={watched.imdbID}
@@ -242,7 +242,7 @@ function WatchedSummary({ watched }) {
   return (
     <>
       <div className="bg-red-400 text-white p-4 my-2">
-        <p>Total Watched Movie {watched.length}</p>
+        <p>Total Watched Movie {watched?.length}</p>
       </div>
     </>
   );
