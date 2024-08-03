@@ -29,7 +29,7 @@ function App() {
         setIsLoading(true);
         setIsError("");
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=418f660d&s=${query}`
+          `https://www.omdbapi.com/?apikey=418f660d&s=${query}`
         );
         if (!res.ok) {
           throw new Error("something went wrong in fetching movies");
