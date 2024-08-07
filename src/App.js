@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./component/Navbar";
+import Navbar from "./Navbar";
 import "./index.css";
 function App() {
   const [query, setQuery] = useState("Inception");
@@ -9,7 +9,7 @@ function App() {
   const [selectedId, setSelectedId] = useState(null);
   const [watched, setWatched] = useState(function () {
     const wm = localStorage.getItem("watched");
-    return JSON.parse(wm);
+    return JSON.parse(wm) || [];
   });
 
   function handleSelectedId(id) {
@@ -139,7 +139,7 @@ function MovieDetails({
       try {
         setIsLoading(true);
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=418f660d&i=${selectedId}`
+          `https://www.omdbapi.com/?apikey=418f660d&i=${selectedId}`
         );
         const data = await res.json();
         setMovie(data);

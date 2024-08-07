@@ -1,5 +1,4 @@
 import React from "react";
-
 function Navbar({ setquery }) {
   function handleSetQuery(e) {
     setquery(e.target.value);
