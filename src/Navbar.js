@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from ""
 function Navbar({ setquery }) {
   function handleSetQuery(e) {
     setquery(e.target.value);
@@ -9,7 +10,7 @@ function Navbar({ setquery }) {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <img className="h-8" src="/logo.jpg" alt="Logo" />
+            <img className="h-8" src={{Logo}} alt="Logo" />
             <span className="text-white text-lg font-semibold ml-2">
               Movie Site
             </span>
